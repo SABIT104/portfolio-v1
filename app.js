@@ -50,7 +50,156 @@ document.addEventListener('DOMContentLoaded', () => {
     initLayeredCaseStudy();
     initSkillMapTree();
     initProofWall();
+    initAboutCounterStats();
+    initAboutTechNodePills();
+    initAboutParallaxFloatingTags();
+    initServicesSubservicesToggle();
+    initServicesFaqAccordion();
+    initPillarSmoothScroll();
 });
+
+/* Services Page — Sub-services Accordion Toggle */
+function initServicesSubservicesToggle() {
+    const btns = document.querySelectorAll('.subservices-toggle-btn');
+    if (!btns.length) return;
+
+    btns.forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.preventDefault();
+            const card = btn.closest('.service-card-editorial');
+            if (!card) return;
+
+            const content = card.querySelector('.subservices-collapsible');
+            if (!content) return;
+
+            const isOpen = content.classList.contains('open');
+            btn.classList.toggle('open', !isOpen);
+            content.classList.toggle('open', !isOpen);
+
+            const spanText = btn.querySelector('span');
+            if (spanText) {
+                spanText.textContent = isOpen ? 'Explore Sub-Services →' : 'Hide Sub-Services ↑';
+            }
+        });
+    });
+}
+
+/* Services Page — FAQ Accordion */
+function initServicesFaqAccordion() {
+    const questions = document.querySelectorAll('.faq-card-question');
+    if (!questions.length) return;
+
+    questions.forEach(q => {
+        q.addEventListener('click', () => {
+            const item = q.closest('.faq-card-item');
+            if (!item) return;
+
+            const isOpen = item.classList.contains('open');
+
+            // Close siblings
+            document.querySelectorAll('.faq-card-item').forEach(other => {
+                if (other !== item) other.classList.remove('open');
+            });
+
+            item.classList.toggle('open', !isOpen);
+        });
+    });
+}
+
+/* Services Page — Pillar Smooth Jump */
+function initPillarSmoothScroll() {
+    const pillarCards = document.querySelectorAll('.pillar-jump-card');
+    if (!pillarCards.length) return;
+
+    pillarCards.forEach(card => {
+        card.addEventListener('click', () => {
+            const targetId = card.dataset.target;
+            if (!targetId) return;
+
+            const targetElem = document.getElementById(targetId);
+            if (targetElem) {
+                targetElem.scrollIntoView({ behavior: 'smooth' });
+            }
+        });
+    });
+}
+
+
+/* About Page — Counter Animations */
+function initAboutCounterStats() {
+    const stats = document.querySelectorAll('.impact-number');
+    if (!stats.length) return;
+
+    let hasAnimated = false;
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting && !hasAnimated) {
+                hasAnimated = true;
+                stats.forEach(stat => {
+                    const target = parseInt(stat.dataset.target, 10);
+                    if (isNaN(target)) return;
+
+                    let count = 0;
+                    const duration = 2000;
+                    const stepTime = Math.abs(Math.floor(duration / target));
+
+                    const timer = setInterval(() => {
+                        count += 1;
+                        stat.textContent = count;
+                        if (count >= target) {
+                            stat.textContent = target;
+                            clearInterval(timer);
+                        }
+                    }, Math.max(stepTime, 30));
+                });
+            }
+        });
+    }, { threshold: 0.4 });
+
+    const section = document.querySelector('.impact-stats-section');
+    if (section) observer.observe(section);
+}
+
+/* About Page — Tech Node Interactivity */
+function initAboutTechNodePills() {
+    const pills = document.querySelectorAll('.tech-node-pill');
+    if (!pills.length) return;
+
+    pills.forEach(pill => {
+        pill.addEventListener('click', () => {
+            pills.forEach(p => p.classList.remove('active'));
+            pill.classList.add('active');
+        });
+    });
+}
+
+/* About Page — Parallax Floating Hero Tags */
+function initAboutParallaxFloatingTags() {
+    const heroWrapper = document.querySelector('.about-hero-section');
+    const tags = document.querySelectorAll('.floating-tag');
+
+    if (!heroWrapper || !tags.length) return;
+
+    heroWrapper.addEventListener('mousemove', (e) => {
+        const { clientX, clientY } = e;
+        const centerX = window.innerWidth / 2;
+        const centerY = window.innerHeight / 2;
+
+        tags.forEach((tag, index) => {
+            const speed = (index + 1) * 0.015;
+            const x = (clientX - centerX) * speed;
+            const y = (clientY - centerY) * speed;
+            tag.style.transform = `translate(${x}px, ${y}px)`;
+        });
+    });
+
+    heroWrapper.addEventListener('mouseleave', () => {
+        tags.forEach(tag => {
+            tag.style.transform = `translate(0px, 0px)`;
+        });
+    });
+}
+
 
 /* Navigation & Drawer */
 function initNavigation() {

@@ -4,16 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Services | Saimun Sabit Web Developer & SEO Expert</title>
-    <meta name="description" content="Explore professional Web Development, SEO Audits, Local SEO, and Speed Optimization services tailored for service businesses.">
+    <meta name="description" content="Explore professional Web Development and SEO services — custom web engineering, technical SEO, performance tuning, and digital growth strategy.">
     <link rel="canonical" href="https://saimunsabit.com/services.html">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body data-page="services">
 
+    <!-- Header Navigation -->
     <header class="site-header" id="site-header">
         <div class="container header-inner">
             <a href="index.html" class="brand-logo">
@@ -32,12 +33,13 @@
                 </ul>
             </nav>
             <div class="header-actions">
-                <a href="contact.html" class="btn btn-dark">Let's Work Together</a>
+                <a href="contact.html" class="btn btn-dark magnetic-btn">Let's Work Together</a>
                 <button class="mobile-toggle" id="mobile-toggle"><i class="fa-solid fa-bars-staggered"></i></button>
             </div>
         </div>
     </header>
 
+    <!-- Mobile Drawer Navigation -->
     <div class="mobile-drawer" id="mobile-drawer">
         <div class="drawer-header">
             <div class="brand-logo"><span class="brand-name">Saimun Sabit</span></div>
@@ -56,161 +58,738 @@
     <div class="drawer-backdrop" id="drawer-backdrop"></div>
 
     <main>
-        <section class="page-banner">
+        <!-- Hero Section -->
+        <section class="services-hero-section">
             <div class="container">
-                <div class="breadcrumb">
-                    <a href="index.html">Home</a> &rarr; <span>Services</span>
+                <span class="services-hero-badge"><i class="fa-solid fa-layer-group"></i> SERVICES & CAPABILITIES</span>
+                <h1 class="services-hero-title">Services That Build, <br><span class="editorial-serif">Optimize & Grow</span></h1>
+                <p class="services-hero-lead">
+                    Combining full-stack web engineering with enterprise technical SEO to build fast, search-friendly, and high-converting digital experiences.
+                </p>
+
+                <!-- Two Core Pillars Jump Cards -->
+                <div class="two-pillars-row">
+                    <div class="pillar-jump-card" data-target="section-web-dev">
+                        <div class="pillar-jump-icon"><i class="fa-solid fa-code"></i></div>
+                        <div class="pillar-jump-text">
+                            <span class="pillar-jump-tag">BUILD</span>
+                            <h3 class="pillar-jump-title">Web Development</h3>
+                        </div>
+                    </div>
+
+                    <div class="pillar-jump-card" data-target="section-seo">
+                        <div class="pillar-jump-icon"><i class="fa-solid fa-chart-line"></i></div>
+                        <div class="pillar-jump-text">
+                            <span class="pillar-jump-tag">GROW</span>
+                            <h3 class="pillar-jump-title">SEO Services</h3>
+                        </div>
+                    </div>
                 </div>
-                <h1 class="page-title">Digital Solutions Built for Conversions & Rankings</h1>
-                <p class="page-lead">End-to-end Web Development and Search Engine Optimization packages.</p>
             </div>
         </section>
 
-        <!-- Detailed Services Breakdown -->
-        <section class="services-detail-section">
-            <div class="container">
-                
-                <!-- Web Development -->
-                <div class="service-detail-block" id="web-dev-detail">
-                    <div class="service-detail-header">
-                        <div class="service-icon-large"><i class="fa-solid fa-code"></i></div>
-                        <div>
-                            <h2>Web Development Services</h2>
-                            <p>Custom, lightning-fast web applications and responsive WordPress platforms built to turn site visitors into paying clients.</p>
-                        </div>
-                    </div>
-
-                    <div class="service-subgrid">
-                        <div class="sub-card">
-                            <i class="fa-solid fa-desktop"></i>
-                            <h3>Frontend & UI/UX</h3>
-                            <p>Pixel-perfect responsive layouts crafted with modern HTML5, CSS3, JavaScript, React, and clean typography tailored to your brand.</p>
-                        </div>
-                        <div class="sub-card">
-                            <i class="fa-solid fa-tachometer-alt"></i>
-                            <h3>Core Web Vitals Speed Tuning</h3>
-                            <p>Optimization of image weights, code splitting, script deferral, and server response time to guarantee 95+ PageSpeed scores.</p>
-                        </div>
-                        <div class="sub-card">
-                            <i class="fa-brands fa-wordpress"></i>
-                            <h3>Custom WordPress Development</h3>
-                            <p>Zero-bloat WordPress custom theme development with flexible page builder blocks and effortless content management.</p>
-                        </div>
-                        <div class="sub-card">
-                            <i class="fa-solid fa-robot"></i>
-                            <h3>AI & Automated Integrations</h3>
-                            <p>Integration of automated booking widgets, AI lead chatbots, CRM sync, and Google Analytics 4 conversion tracking.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- SEO Services -->
-                <div class="service-detail-block mt-5" id="seo-detail">
-                    <div class="service-detail-header">
-                        <div class="service-icon-large"><i class="fa-solid fa-chart-line"></i></div>
-                        <div>
-                            <h2>Search Engine Optimization (SEO) Services</h2>
-                            <p>Strategic, white-hat SEO campaigns designed to get your business onto Page #1 of Google for high-intent target keywords.</p>
-                        </div>
-                    </div>
-
-                    <div class="service-subgrid">
-                        <div class="sub-card">
-                            <i class="fa-solid fa-location-dot"></i>
-                            <h3>Local SEO & Google Maps</h3>
-                            <p>Dominate local search results in your city. Google Business Profile setup, local citation building, and review strategy.</p>
-                        </div>
-                        <div class="sub-card">
-                            <i class="fa-solid fa-magnifying-glass"></i>
-                            <h3>Technical SEO Audits</h3>
-                            <p>In-depth crawl analysis, fixing 404 errors, indexation issues, canonical URLs, XML sitemaps, and Schema markup.</p>
-                        </div>
-                        <div class="sub-card">
-                            <i class="fa-solid fa-shop"></i>
-                            <h3>E-commerce & Shopify SEO</h3>
-                            <p>Product schema optimization, collection hierarchy restructuring, internal linking, and meta tag optimization for stores.</p>
-                        </div>
-                        <div class="sub-card">
-                            <i class="fa-solid fa-pen-nib"></i>
-                            <h3>Content & On-Page Strategy</h3>
-                            <p>Researching target search queries, crafting keyword-optimized landing pages, and publishing authoritative blog content.</p>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </section>
-
-        <!-- Our 4-Step Working Process -->
-        <section class="process-section">
+        <!-- SECTION 01 — WEB DEVELOPMENT -->
+        <section class="service-section-block" id="section-web-dev">
             <div class="container">
                 <div class="section-header text-center">
-                    <span class="section-label">HOW IT WORKS</span>
+                    <span class="section-head-pill"><i class="fa-solid fa-code"></i> SECTION 01</span>
+                    <h2 class="section-title">Web Development</h2>
+                    <p class="section-subtitle">Building modern digital experiences from interface to infrastructure.</p>
+                </div>
+
+                <p class="services-hero-lead text-center mb-0">
+                    I develop fast, responsive and scalable websites and web applications—from pixel-perfect front-end interfaces to backend systems, databases, APIs and deployment.
+                </p>
+
+                <!-- Ecosystem Flow Diagram -->
+                <div class="ecosystem-flow-box">
+                    <div class="flow-diagram-track">
+                        <div class="flow-node"><i class="fa-solid fa-paintbrush"></i> UI</div>
+                        <span class="flow-arrow">&rarr;</span>
+                        <div class="flow-node"><i class="fa-solid fa-code"></i> FRONTEND</div>
+                        <span class="flow-arrow">&rarr;</span>
+                        <div class="flow-node"><i class="fa-solid fa-server"></i> BACKEND</div>
+                        <span class="flow-arrow">&rarr;</span>
+                        <div class="flow-node"><i class="fa-solid fa-database"></i> DATABASE</div>
+                        <span class="flow-arrow">&rarr;</span>
+                        <div class="flow-node"><i class="fa-solid fa-network-wired"></i> API</div>
+                        <span class="flow-arrow">&rarr;</span>
+                        <div class="flow-node"><i class="fa-solid fa-cloud-arrow-up"></i> DEPLOYMENT</div>
+                    </div>
+                </div>
+
+                <!-- Web Development 6 Classifications Grid -->
+                <div class="services-editorial-grid">
+                    <!-- 01 — Frontend Development -->
+                    <div class="service-card-editorial">
+                        <span class="card-num-badge">01</span>
+                        <h3 class="service-card-title">Frontend Development</h3>
+                        <p class="service-card-desc">
+                            Transform designs and ideas into responsive, interactive and high-performance web interfaces built for real users and modern devices.
+                        </p>
+
+                        <div class="service-visual-diagram">
+                            <div class="diagram-flow-row">
+                                <span class="diagram-pill"><i class="fa-solid fa-figma"></i> Design</span>
+                                <span class="diagram-arrow">&rarr;</span>
+                                <span class="diagram-pill"><i class="fa-solid fa-code"></i> Code</span>
+                                <span class="diagram-arrow">&rarr;</span>
+                                <span class="diagram-pill"><i class="fa-solid fa-desktop"></i> Interface</span>
+                            </div>
+                        </div>
+
+                        <button class="subservices-toggle-btn">
+                            <span>Explore Sub-Services &rarr;</span> <i class="fa-solid fa-chevron-down"></i>
+                        </button>
+                        <div class="subservices-collapsible">
+                            <div class="subservices-grid-list">
+                                <span class="subservice-chip"><i class="fa-solid fa-check"></i> Figma / Adobe XD to HTML, React</span>
+                                <span class="subservice-chip"><i class="fa-solid fa-check"></i> Responsive & Mobile Layouts</span>
+                                <span class="subservice-chip"><i class="fa-solid fa-check"></i> Client-Side SPA Apps</span>
+                                <span class="subservice-chip"><i class="fa-solid fa-check"></i> React.js</span>
+                                <span class="subservice-chip"><i class="fa-solid fa-check"></i> Vue.js</span>
+                                <span class="subservice-chip"><i class="fa-solid fa-check"></i> Next.js Framework</span>
+                                <span class="subservice-chip"><i class="fa-solid fa-check"></i> Interactive UI Systems</span>
+                                <span class="subservice-chip"><i class="fa-solid fa-check"></i> Web Animations & Micro-interactions</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 02 — Backend Development -->
+                    <div class="service-card-editorial">
+                        <span class="card-num-badge">02</span>
+                        <h3 class="service-card-title">Backend Development</h3>
+                        <p class="service-card-desc">
+                            Build reliable server-side systems that handle business logic, authentication, data processing and application functionality.
+                        </p>
+
+                        <div class="service-visual-diagram">
+                            <div class="diagram-flow-row">
+                                <span class="diagram-pill"><i class="fa-solid fa-user"></i> Client</span>
+                                <span class="diagram-arrow">&rarr;</span>
+                                <span class="diagram-pill"><i class="fa-solid fa-gears"></i> API</span>
+                                <span class="diagram-arrow">&rarr;</span>
+                                <span class="diagram-pill"><i class="fa-solid fa-server"></i> Server</span>
+                                <span class="diagram-arrow">&rarr;</span>
+                                <span class="diagram-pill"><i class="fa-solid fa-database"></i> Database</span>
+                            </div>
+                        </div>
+
+                        <button class="subservices-toggle-btn">
+                            <span>Explore Sub-Services &rarr;</span> <i class="fa-solid fa-chevron-down"></i>
+                        </button>
+                        <div class="subservices-collapsible">
+                            <div class="subservices-grid-list">
+                                <span class="subservice-chip"><i class="fa-solid fa-check"></i> Server-Side Architecture</span>
+                                <span class="subservice-chip"><i class="fa-solid fa-check"></i> Node.js & Express</span>
+                                <span class="subservice-chip"><i class="fa-solid fa-check"></i> Python & Flask/Django</span>
+                                <span class="subservice-chip"><i class="fa-solid fa-check"></i> PHP & Custom Laravel</span>
+                                <span class="subservice-chip"><i class="fa-solid fa-check"></i> User Authentication (JWT / OAuth)</span>
+                                <span class="subservice-chip"><i class="fa-solid fa-check"></i> Role-Based Access Control</span>
+                                <span class="subservice-chip"><i class="fa-solid fa-check"></i> Admin / User Dashboards</span>
+                                <span class="subservice-chip"><i class="fa-solid fa-check"></i> File & Media Processing</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 03 — Database Management -->
+                    <div class="service-card-editorial">
+                        <span class="card-num-badge">03</span>
+                        <h3 class="service-card-title">Database Management</h3>
+                        <p class="service-card-desc">
+                            Design structured, reliable and optimized data systems that support scalable web applications.
+                        </p>
+
+                        <div class="service-visual-diagram">
+                            <div class="diagram-flow-row">
+                                <span class="diagram-pill"><i class="fa-solid fa-database"></i> App</span>
+                                <span class="diagram-arrow">&rarr;</span>
+                                <span class="diagram-pill"><i class="fa-solid fa-magnifying-glass"></i> Query</span>
+                                <span class="diagram-arrow">&rarr;</span>
+                                <span class="diagram-pill"><i class="fa-solid fa-server"></i> DB Node</span>
+                                <span class="diagram-arrow">&rarr;</span>
+                                <span class="diagram-pill"><i class="fa-solid fa-box-archive"></i> Storage</span>
+                            </div>
+                        </div>
+
+                        <button class="subservices-toggle-btn">
+                            <span>Explore Sub-Services &rarr;</span> <i class="fa-solid fa-chevron-down"></i>
+                        </button>
+                        <div class="subservices-collapsible">
+                            <div class="subservices-grid-list">
+                                <span class="subservice-chip"><i class="fa-solid fa-check"></i> SQL Schema Design (MySQL/Postgres)</span>
+                                <span class="subservice-chip"><i class="fa-solid fa-check"></i> NoSQL Database Design (MongoDB)</span>
+                                <span class="subservice-chip"><i class="fa-solid fa-check"></i> SQL Query Optimization</span>
+                                <span class="subservice-chip"><i class="fa-solid fa-check"></i> Database Speed Tuning</span>
+                                <span class="subservice-chip"><i class="fa-solid fa-check"></i> Safe Data Migration</span>
+                                <span class="subservice-chip"><i class="fa-solid fa-check"></i> Automated Backup Systems</span>
+                                <span class="subservice-chip"><i class="fa-solid fa-check"></i> Database Architecture</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 04 — API Integration -->
+                    <div class="service-card-editorial">
+                        <span class="card-num-badge">04</span>
+                        <h3 class="service-card-title">API Integration</h3>
+                        <p class="service-card-desc">
+                            Connect websites and applications with payment systems, external platforms and third-party services through reliable APIs.
+                        </p>
+
+                        <div class="service-visual-diagram">
+                            <div class="diagram-flow-row">
+                                <span class="diagram-pill"><i class="fa-solid fa-credit-card"></i> Payment</span>
+                                <span class="diagram-arrow">&rarr;</span>
+                                <span class="diagram-pill"><i class="fa-solid fa-comment-sms"></i> SMS</span>
+                                <span class="diagram-arrow">&rarr;</span>
+                                <span class="diagram-pill"><i class="fa-solid fa-envelope"></i> Email</span>
+                                <span class="diagram-arrow">&rarr;</span>
+                                <span class="diagram-pill"><i class="fa-solid fa-map-location-dot"></i> Maps</span>
+                            </div>
+                        </div>
+
+                        <button class="subservices-toggle-btn">
+                            <span>Explore Sub-Services &rarr;</span> <i class="fa-solid fa-chevron-down"></i>
+                        </button>
+                        <div class="subservices-collapsible">
+                            <div class="subservices-grid-list">
+                                <span class="subservice-chip"><i class="fa-solid fa-check"></i> Custom RESTful APIs</span>
+                                <span class="subservice-chip"><i class="fa-solid fa-check"></i> GraphQL Endpoints</span>
+                                <span class="subservice-chip"><i class="fa-solid fa-check"></i> bKash Integration</span>
+                                <span class="subservice-chip"><i class="fa-solid fa-check"></i> Stripe Payment Gateway</span>
+                                <span class="subservice-chip"><i class="fa-solid fa-check"></i> PayPal Integration</span>
+                                <span class="subservice-chip"><i class="fa-solid fa-check"></i> Twilio / SMS Services</span>
+                                <span class="subservice-chip"><i class="fa-solid fa-check"></i> SendGrid / Email APIs</span>
+                                <span class="subservice-chip"><i class="fa-solid fa-check"></i> Google Maps Platform</span>
+                                <span class="subservice-chip"><i class="fa-solid fa-check"></i> Third-Party Webhooks</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 05 — DevOps & Deployment -->
+                    <div class="service-card-editorial">
+                        <span class="card-num-badge">05</span>
+                        <h3 class="service-card-title">DevOps & Deployment</h3>
+                        <p class="service-card-desc">
+                            Take projects from development to production with reliable hosting, deployment, security and infrastructure configuration.
+                        </p>
+
+                        <div class="service-visual-diagram">
+                            <div class="diagram-flow-row">
+                                <span class="diagram-pill"><i class="fa-solid fa-code"></i> Code</span>
+                                <span class="diagram-arrow">&rarr;</span>
+                                <span class="diagram-pill"><i class="fa-solid fa-cube"></i> Build</span>
+                                <span class="diagram-arrow">&rarr;</span>
+                                <span class="diagram-pill"><i class="fa-solid fa-vial"></i> Test</span>
+                                <span class="diagram-arrow">&rarr;</span>
+                                <span class="diagram-pill"><i class="fa-solid fa-rocket"></i> Deploy</span>
+                                <span class="diagram-arrow">&rarr;</span>
+                                <span class="diagram-pill"><i class="fa-solid fa-circle-check"></i> Live</span>
+                            </div>
+                        </div>
+
+                        <button class="subservices-toggle-btn">
+                            <span>Explore Sub-Services &rarr;</span> <i class="fa-solid fa-chevron-down"></i>
+                        </button>
+                        <div class="subservices-collapsible">
+                            <div class="subservices-grid-list">
+                                <span class="subservice-chip"><i class="fa-solid fa-check"></i> Server Setup & Linux Management</span>
+                                <span class="subservice-chip"><i class="fa-solid fa-check"></i> Hosting Configuration</span>
+                                <span class="subservice-chip"><i class="fa-solid fa-check"></i> AWS Cloud & EC2/S3</span>
+                                <span class="subservice-chip"><i class="fa-solid fa-check"></i> DigitalOcean Droplets</span>
+                                <span class="subservice-chip"><i class="fa-solid fa-check"></i> Vercel & Netlify Deployment</span>
+                                <span class="subservice-chip"><i class="fa-solid fa-check"></i> Domain & DNS Management</span>
+                                <span class="subservice-chip"><i class="fa-solid fa-check"></i> SSL Certificate Setup</span>
+                                <span class="subservice-chip"><i class="fa-solid fa-check"></i> Docker Containerization</span>
+                                <span class="subservice-chip"><i class="fa-solid fa-check"></i> CI/CD Pipeline Automation</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 06 — Maintenance & Optimization -->
+                    <div class="service-card-editorial">
+                        <span class="card-num-badge">06</span>
+                        <h3 class="service-card-title">Maintenance & Optimization</h3>
+                        <p class="service-card-desc">
+                            Keep websites secure, fast, stable and technically optimized after launch.
+                        </p>
+
+                        <div class="service-visual-diagram">
+                            <div class="diagram-flow-row">
+                                <span class="diagram-pill"><i class="fa-solid fa-bolt"></i> 98/100 Core Web Vitals</span>
+                                <span class="diagram-arrow">|</span>
+                                <span class="diagram-pill"><i class="fa-solid fa-stopwatch"></i> 0.4s LCP</span>
+                                <span class="diagram-arrow">|</span>
+                                <span class="diagram-pill"><i class="fa-solid fa-shield-halved"></i> 100% Security</span>
+                            </div>
+                        </div>
+
+                        <button class="subservices-toggle-btn">
+                            <span>Explore Sub-Services &rarr;</span> <i class="fa-solid fa-chevron-down"></i>
+                        </button>
+                        <div class="subservices-collapsible">
+                            <div class="subservices-grid-list">
+                                <span class="subservice-chip"><i class="fa-solid fa-check"></i> Website Speed Optimization</span>
+                                <span class="subservice-chip"><i class="fa-solid fa-check"></i> Advanced Caching & CDN</span>
+                                <span class="subservice-chip"><i class="fa-solid fa-check"></i> Redis In-Memory Caching</span>
+                                <span class="subservice-chip"><i class="fa-solid fa-check"></i> Technical SEO Code Fixes</span>
+                                <span class="subservice-chip"><i class="fa-solid fa-check"></i> SSR Support & Hydration</span>
+                                <span class="subservice-chip"><i class="fa-solid fa-check"></i> Rapid Bug Fixing</span>
+                                <span class="subservice-chip"><i class="fa-solid fa-check"></i> Security Patches & Firewalls</span>
+                                <span class="subservice-chip"><i class="fa-solid fa-check"></i> Ongoing Technical Maintenance</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CMS & WEBSITE PLATFORMS -->
+        <section class="cms-platforms-section">
+            <div class="container">
+                <div class="section-header text-center">
+                    <span class="section-head-pill"><i class="fa-solid fa-layer-group"></i> PLATFORM ECOSYSTEM</span>
+                    <h2 class="section-title">One Developer. Multiple Platforms.</h2>
+                    <p class="section-subtitle">
+                        Whether your website runs on a CMS, e-commerce platform, visual builder or custom technology stack, I can work with the platform that best fits your project.
+                    </p>
+                </div>
+
+                <div class="cms-stack-wrapper">
+                    <div class="cms-central-badge">
+                        <span class="cms-center-pill"><i class="fa-solid fa-cubes"></i> SAIMUN'S DEVELOPMENT STACK</span>
+                    </div>
+
+                    <div class="cms-clusters-grid">
+                        <!-- Cluster 1: CMS & Website Platforms -->
+                        <div class="platform-cluster-card">
+                            <h3 class="cluster-title"><i class="fa-solid fa-globe"></i> CMS & Website Platforms</h3>
+                            <div class="platform-pills-list">
+                                <span class="platform-pill"><i class="fa-brands fa-wordpress"></i> WordPress</span>
+                                <span class="platform-pill"><i class="fa-brands fa-shopify"></i> Shopify</span>
+                                <span class="platform-pill"><i class="fa-solid fa-cube"></i> Webflow</span>
+                                <span class="platform-pill"><i class="fa-solid fa-square-poll-vertical"></i> Squarespace</span>
+                                <span class="platform-pill"><i class="fa-solid fa-w"></i> Wix</span>
+                                <span class="platform-pill"><i class="fa-solid fa-wand-magic-sparkles"></i> Framer</span>
+                                <span class="platform-pill"><i class="fa-brands fa-joomla"></i> Joomla</span>
+                                <span class="platform-pill"><i class="fa-brands fa-drupal"></i> Drupal</span>
+                                <span class="platform-pill"><i class="fa-solid fa-ghost"></i> Ghost</span>
+                            </div>
+                        </div>
+
+                        <!-- Cluster 2: E-commerce -->
+                        <div class="platform-cluster-card">
+                            <h3 class="cluster-title"><i class="fa-solid fa-cart-shopping"></i> E-commerce</h3>
+                            <div class="platform-pills-list">
+                                <span class="platform-pill"><i class="fa-brands fa-shopify"></i> Shopify</span>
+                                <span class="platform-pill"><i class="fa-solid fa-bag-shopping"></i> WooCommerce</span>
+                                <span class="platform-pill"><i class="fa-solid fa-store"></i> Custom E-commerce</span>
+                            </div>
+                        </div>
+
+                        <!-- Cluster 3: Custom Development -->
+                        <div class="platform-cluster-card">
+                            <h3 class="cluster-title"><i class="fa-solid fa-code"></i> Custom Development</h3>
+                            <div class="platform-pills-list">
+                                <span class="platform-pill"><i class="fa-brands fa-html5"></i> HTML5 / CSS3 / JS</span>
+                                <span class="platform-pill"><i class="fa-brands fa-react"></i> React.js</span>
+                                <span class="platform-pill"><i class="fa-solid fa-n"></i> Next.js</span>
+                                <span class="platform-pill"><i class="fa-brands fa-node-js"></i> Node.js</span>
+                                <span class="platform-pill"><i class="fa-brands fa-python"></i> Python</span>
+                                <span class="platform-pill"><i class="fa-brands fa-laravel"></i> Laravel</span>
+                                <span class="platform-pill"><i class="fa-solid fa-sliders"></i> Custom CMS</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 02 — SEO -->
+        <section class="seo-transition-section" id="section-seo">
+            <div class="container">
+                <span class="section-head-pill text-white"><i class="fa-solid fa-chart-line"></i> SECTION 02</span>
+                <h2 class="seo-trans-title">
+                    BUILD IT RIGHT. <br>
+                    <span class="highlight-gold">GET IT FOUND.</span>
+                </h2>
+                <p class="seo-trans-lead">
+                    A technically strong website is only the beginning. I optimize websites for search visibility, relevance, technical health and sustainable organic growth.
+                </p>
+
+                <!-- Flow Transition Diagram -->
+                <div class="seo-flow-diagram">
+                    <div class="seo-flow-node"><i class="fa-solid fa-desktop"></i> Website</div>
+                    <span class="seo-flow-arrow">&rarr;</span>
+                    <div class="seo-flow-node"><i class="fa-solid fa-magnifying-glass"></i> Search Engine</div>
+                    <span class="seo-flow-arrow">&rarr;</span>
+                    <div class="seo-flow-node"><i class="fa-solid fa-user-check"></i> Target User</div>
+                    <span class="seo-flow-arrow">&rarr;</span>
+                    <div class="seo-flow-node"><i class="fa-solid fa-chart-line"></i> Business Revenue</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SEO 6 Service Classifications Section -->
+        <section class="service-section-block bg-alt">
+            <div class="container">
+                <div class="section-header text-center">
+                    <span class="section-head-pill"><i class="fa-solid fa-magnifying-glass-chart"></i> ORGANIC GROWTH</span>
+                    <h2 class="section-title">SEO Service Classifications</h2>
+                    <p class="section-subtitle">Data-backed search optimization strategies tailored for Page #1 rankability.</p>
+                </div>
+
+                <div class="services-editorial-grid">
+                    <!-- 01 — On-Page SEO -->
+                    <div class="service-card-editorial">
+                        <span class="card-num-badge">01</span>
+                        <h3 class="service-card-title">On-Page SEO</h3>
+                        <p class="service-card-desc">
+                            Optimize every important page element so search engines and users can clearly understand the content and its purpose.
+                        </p>
+
+                        <div class="service-visual-diagram">
+                            <div class="diagram-flow-row">
+                                <span class="diagram-pill"><i class="fa-solid fa-heading"></i> Title</span>
+                                <span class="diagram-arrow">&rarr;</span>
+                                <span class="diagram-pill"><i class="fa-solid fa-font"></i> H1 Header</span>
+                                <span class="diagram-arrow">&rarr;</span>
+                                <span class="diagram-pill"><i class="fa-solid fa-align-left"></i> Content</span>
+                                <span class="diagram-arrow">&rarr;</span>
+                                <span class="diagram-pill"><i class="fa-solid fa-link"></i> Internal Links</span>
+                            </div>
+                        </div>
+
+                        <button class="subservices-toggle-btn">
+                            <span>Explore Sub-Services &rarr;</span> <i class="fa-solid fa-chevron-down"></i>
+                        </button>
+                        <div class="subservices-collapsible">
+                            <div class="subservices-grid-list">
+                                <span class="subservice-chip"><i class="fa-solid fa-check"></i> Keyword Research & Clustering</span>
+                                <span class="subservice-chip"><i class="fa-solid fa-check"></i> Search Intent Mapping</span>
+                                <span class="subservice-chip"><i class="fa-solid fa-check"></i> H1–H6 Heading Hierarchy</span>
+                                <span class="subservice-chip"><i class="fa-solid fa-check"></i> Body Content Optimization</span>
+                                <span class="subservice-chip"><i class="fa-solid fa-check"></i> LSI & Semantic Keywords</span>
+                                <span class="subservice-chip"><i class="fa-solid fa-check"></i> Meta Title & Description Tuning</span>
+                                <span class="subservice-chip"><i class="fa-solid fa-check"></i> URL Slug Optimization</span>
+                                <span class="subservice-chip"><i class="fa-solid fa-check"></i> Strategic Internal Linking</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 02 — Technical SEO -->
+                    <div class="service-card-editorial">
+                        <span class="card-num-badge">02</span>
+                        <h3 class="service-card-title">Technical SEO</h3>
+                        <p class="service-card-desc">
+                            Improve the technical foundation of a website so search engines can crawl, understand, index and efficiently serve its pages.
+                        </p>
+
+                        <div class="service-visual-diagram">
+                            <div class="diagram-flow-row">
+                                <span class="diagram-pill"><i class="fa-solid fa-spider"></i> Crawl</span>
+                                <span class="diagram-arrow">&rarr;</span>
+                                <span class="diagram-pill"><i class="fa-solid fa-brain"></i> Understand</span>
+                                <span class="diagram-arrow">&rarr;</span>
+                                <span class="diagram-pill"><i class="fa-solid fa-box-archive"></i> Index</span>
+                                <span class="diagram-arrow">&rarr;</span>
+                                <span class="diagram-pill"><i class="fa-solid fa-trophy"></i> Rank</span>
+                            </div>
+                        </div>
+
+                        <button class="subservices-toggle-btn">
+                            <span>Explore Sub-Services &rarr;</span> <i class="fa-solid fa-chevron-down"></i>
+                        </button>
+                        <div class="subservices-collapsible">
+                            <div class="subservices-grid-list">
+                                <span class="subservice-chip"><i class="fa-solid fa-check"></i> Core Web Vitals Speed Audits</span>
+                                <span class="subservice-chip"><i class="fa-solid fa-check"></i> Mobile-Friendliness Checks</span>
+                                <span class="subservice-chip"><i class="fa-solid fa-check"></i> XML Sitemap Generation</span>
+                                <span class="subservice-chip"><i class="fa-solid fa-check"></i> Robots.txt Optimization</span>
+                                <span class="subservice-chip"><i class="fa-solid fa-check"></i> Canonical Tag Audit</span>
+                                <span class="subservice-chip"><i class="fa-solid fa-check"></i> 301 Redirect Mapping</span>
+                                <span class="subservice-chip"><i class="fa-solid fa-check"></i> Schema.org Structured Data</span>
+                                <span class="subservice-chip"><i class="fa-solid fa-check"></i> Indexing & Crawlability Fixes</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 03 — Off-Page SEO -->
+                    <div class="service-card-editorial">
+                        <span class="card-num-badge">03</span>
+                        <h3 class="service-card-title">Off-Page SEO</h3>
+                        <p class="service-card-desc">
+                            Build authority and strengthen website credibility through relevant, high-quality external signals.
+                        </p>
+
+                        <div class="service-visual-diagram">
+                            <div class="diagram-flow-row">
+                                <span class="diagram-pill"><i class="fa-solid fa-share-nodes"></i> External Signals</span>
+                                <span class="diagram-arrow">&rarr;</span>
+                                <span class="diagram-pill"><i class="fa-solid fa-newspaper"></i> Editorial Citations</span>
+                                <span class="diagram-arrow">&rarr;</span>
+                                <span class="diagram-pill"><i class="fa-solid fa-shield-halved"></i> Domain Authority</span>
+                            </div>
+                        </div>
+
+                        <button class="subservices-toggle-btn">
+                            <span>Explore Sub-Services &rarr;</span> <i class="fa-solid fa-chevron-down"></i>
+                        </button>
+                        <div class="subservices-collapsible">
+                            <div class="subservices-grid-list">
+                                <span class="subservice-chip"><i class="fa-solid fa-check"></i> High-Authority Link Building</span>
+                                <span class="subservice-chip"><i class="fa-solid fa-check"></i> Niche Guest Placement</span>
+                                <span class="subservice-chip"><i class="fa-solid fa-check"></i> Editorial Links</span>
+                                <span class="subservice-chip"><i class="fa-solid fa-check"></i> Manual Outreach Campaigns</span>
+                                <span class="subservice-chip"><i class="fa-solid fa-check"></i> Digital PR Mentions</span>
+                                <span class="subservice-chip"><i class="fa-solid fa-check"></i> Brand Unlinked Mentions</span>
+                                <span class="subservice-chip"><i class="fa-solid fa-check"></i> Citation Tracking</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 04 — Local SEO -->
+                    <div class="service-card-editorial">
+                        <span class="card-num-badge">04</span>
+                        <h3 class="service-card-title">Local SEO</h3>
+                        <p class="service-card-desc">
+                            Improve local search visibility and help businesses become easier to discover in their target locations.
+                        </p>
+
+                        <div class="service-visual-diagram">
+                            <div class="diagram-flow-row">
+                                <span class="diagram-pill"><i class="fa-solid fa-map-pin"></i> Map Pack</span>
+                                <span class="diagram-arrow">&rarr;</span>
+                                <span class="diagram-pill"><i class="fa-solid fa-magnifying-glass"></i> Local Query</span>
+                                <span class="diagram-arrow">&rarr;</span>
+                                <span class="diagram-pill"><i class="fa-solid fa-store"></i> Profile</span>
+                                <span class="diagram-arrow">&rarr;</span>
+                                <span class="diagram-pill"><i class="fa-solid fa-phone"></i> Lead</span>
+                            </div>
+                        </div>
+
+                        <button class="subservices-toggle-btn">
+                            <span>Explore Sub-Services &rarr;</span> <i class="fa-solid fa-chevron-down"></i>
+                        </button>
+                        <div class="subservices-collapsible">
+                            <div class="subservices-grid-list">
+                                <span class="subservice-chip"><i class="fa-solid fa-check"></i> Google Business Profile Setup</span>
+                                <span class="subservice-chip"><i class="fa-solid fa-check"></i> GBP Optimization & Posts</span>
+                                <span class="subservice-chip"><i class="fa-solid fa-check"></i> Local Directory Submissions</span>
+                                <span class="subservice-chip"><i class="fa-solid fa-check"></i> NAP Consistency Audit</span>
+                                <span class="subservice-chip"><i class="fa-solid fa-check"></i> Geo-Targeted Keywords</span>
+                                <span class="subservice-chip"><i class="fa-solid fa-check"></i> Local Service Landing Pages</span>
+                                <span class="subservice-chip"><i class="fa-solid fa-check"></i> Review Generation Strategy</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 05 — E-commerce SEO -->
+                    <div class="service-card-editorial">
+                        <span class="card-num-badge">05</span>
+                        <h3 class="service-card-title">E-commerce SEO</h3>
+                        <p class="service-card-desc">
+                            Optimize product and category structures to improve organic visibility across e-commerce search journeys.
+                        </p>
+
+                        <div class="service-visual-diagram">
+                            <div class="diagram-flow-row">
+                                <span class="diagram-pill"><i class="fa-solid fa-boxes-stacked"></i> Catalog</span>
+                                <span class="diagram-arrow">&rarr;</span>
+                                <span class="diagram-pill"><i class="fa-solid fa-tag"></i> Product Schema</span>
+                                <span class="diagram-arrow">&rarr;</span>
+                                <span class="diagram-pill"><i class="fa-solid fa-star"></i> Rich Snippet</span>
+                                <span class="diagram-arrow">&rarr;</span>
+                                <span class="diagram-pill"><i class="fa-solid fa-cart-shopping"></i> Sales</span>
+                            </div>
+                        </div>
+
+                        <button class="subservices-toggle-btn">
+                            <span>Explore Sub-Services &rarr;</span> <i class="fa-solid fa-chevron-down"></i>
+                        </button>
+                        <div class="subservices-collapsible">
+                            <div class="subservices-grid-list">
+                                <span class="subservice-chip"><i class="fa-solid fa-check"></i> Product Page Optimization</span>
+                                <span class="subservice-chip"><i class="fa-solid fa-check"></i> Category Hierarchy Restructuring</span>
+                                <span class="subservice-chip"><i class="fa-solid fa-check"></i> Faceted Navigation SEO</span>
+                                <span class="subservice-chip"><i class="fa-solid fa-check"></i> E-commerce Canonical Fixes</span>
+                                <span class="subservice-chip"><i class="fa-solid fa-check"></i> Product JSON-LD Schema</span>
+                                <span class="subservice-chip"><i class="fa-solid fa-check"></i> Rating & Review Markup</span>
+                                <span class="subservice-chip"><i class="fa-solid fa-check"></i> Out-of-Stock Redirect Handling</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 06 — SEO Audit, Analytics & Reporting -->
+                    <div class="service-card-editorial">
+                        <span class="card-num-badge">06</span>
+                        <h3 class="service-card-title">SEO Audit & Analytics</h3>
+                        <p class="service-card-desc">
+                            Turn website data and search performance into clear priorities, actionable recommendations and measurable SEO improvements.
+                        </p>
+
+                        <div class="service-visual-diagram">
+                            <div class="diagram-flow-row">
+                                <span class="diagram-pill"><i class="fa-solid fa-chart-pie"></i> GA4</span>
+                                <span class="diagram-arrow">&rarr;</span>
+                                <span class="diagram-pill"><i class="fa-solid fa-chart-line"></i> Search Console</span>
+                                <span class="diagram-arrow">&rarr;</span>
+                                <span class="diagram-pill"><i class="fa-solid fa-file-invoice"></i> Audit</span>
+                                <span class="diagram-arrow">&rarr;</span>
+                                <span class="diagram-pill"><i class="fa-solid fa-arrow-trend-up"></i> Growth</span>
+                            </div>
+                        </div>
+
+                        <button class="subservices-toggle-btn">
+                            <span>Explore Sub-Services &rarr;</span> <i class="fa-solid fa-chevron-down"></i>
+                        </button>
+                        <div class="subservices-collapsible">
+                            <div class="subservices-grid-list">
+                                <span class="subservice-chip"><i class="fa-solid fa-check"></i> Comprehensive Technical Audit</span>
+                                <span class="subservice-chip"><i class="fa-solid fa-check"></i> Google Search Console Setup</span>
+                                <span class="subservice-chip"><i class="fa-solid fa-check"></i> GA4 Telemetry Configuration</span>
+                                <span class="subservice-chip"><i class="fa-solid fa-check"></i> Keyword Rank Tracking</span>
+                                <span class="subservice-chip"><i class="fa-solid fa-check"></i> Competitor Gap Analysis</span>
+                                <span class="subservice-chip"><i class="fa-solid fa-check"></i> Monthly SEO Performance Reports</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SEO + DEVELOPMENT DIFFERENTIATOR -->
+        <section class="services-differentiator-section">
+            <div class="container">
+                <div class="diff-box">
+                    <h2 class="diff-statement">
+                        Most developers build. <br>
+                        Most SEO specialists optimize. <br>
+                        <span class="serif-highlight">I understand both.</span>
+                    </h2>
+                    <p class="diff-lead">
+                        Development determines how a website works. SEO determines how people discover it. Combining both allows the technical foundation, user experience, performance and search strategy to work together seamlessly.
+                    </p>
+
+                    <div class="diff-transformation-track">
+                        <span>CODE</span> + <span>SEO</span> + <span>UX</span> + <span>PERFORMANCE</span>
+                        <span class="transform-arrow">&rarr;</span>
+                        <span class="transform-result">DIGITAL PERFORMANCE</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- WORKING PROCESS (4 Steps) -->
+        <section class="work-process-section">
+            <div class="container">
+                <div class="section-header text-center">
+                    <span class="section-head-pill"><i class="fa-solid fa-list-check"></i> WORKFLOW</span>
                     <h2 class="section-title">My 4-Step Working Process</h2>
+                    <p class="section-subtitle">A transparent, structured approach ensuring speed, quality, and search visibility.</p>
                 </div>
 
-                <div class="process-grid">
-                    <div class="process-step">
-                        <div class="step-num">01</div>
-                        <h3>Audit & Discovery</h3>
-                        <p>We analyze your business goals, target audience, technical site baseline, and competitor SEO strategies.</p>
+                <div class="process-steps-track">
+                    <div class="process-step-card active">
+                        <span class="step-num-badge">01</span>
+                        <h3 class="step-title">Audit & Discovery</h3>
+                        <p class="step-desc">We analyze business goals, target audience, technical site baselines, and competitor SEO strategies.</p>
                     </div>
-                    <div class="process-step">
-                        <div class="step-num">02</div>
-                        <h3>Strategy & Design</h3>
-                        <p>We design responsive wireframes, outline keyword maps, and select the optimal technology stack.</p>
+
+                    <div class="process-step-card">
+                        <span class="step-num-badge">02</span>
+                        <h3 class="step-title">Strategy & Architecture</h3>
+                        <p class="step-desc">We outline responsive UI wireframes, search intent maps, and select the optimal technology stack.</p>
                     </div>
-                    <div class="process-step">
-                        <div class="step-num">03</div>
-                        <h3>Development & SEO</h3>
-                        <p>Clean coding, mobile optimization, schema injection, speed tuning, and high-converting copy placement.</p>
+
+                    <div class="process-step-card">
+                        <span class="step-num-badge">03</span>
+                        <h3 class="step-title">Development & Technical SEO</h3>
+                        <p class="step-desc">Clean coding, mobile optimization, schema injection, 95+ speed tuning, and copy placement.</p>
                     </div>
-                    <div class="process-step">
-                        <div class="step-num">04</div>
-                        <h3>Launch & Rank</h3>
-                        <p>Deployment to live server, indexing submission, GA4 analytics setup, and continuous search performance tracking.</p>
+
+                    <div class="process-step-card">
+                        <span class="step-num-badge">04</span>
+                        <h3 class="step-title">Launch, Index & Grow</h3>
+                        <p class="step-desc">Live server deployment, indexing submission, GA4 analytics setup, and continuous rank tracking.</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- FAQ Section -->
-        <section class="faq-section">
+        <!-- FAQ Section Redesign -->
+        <section class="faq-section-redesign">
             <div class="container">
                 <div class="section-header text-center">
-                    <span class="section-label">FAQS</span>
+                    <span class="section-head-pill"><i class="fa-solid fa-circle-question"></i> FAQS</span>
                     <h2 class="section-title">Frequently Asked Questions</h2>
+                    <p class="section-subtitle">Clear answers to common questions about my development and SEO workflow.</p>
                 </div>
 
-                <div class="faq-accordion">
-                    <div class="faq-item">
-                        <h4 class="faq-question">How long does it take to complete a web development project? <i class="fa-solid fa-chevron-down"></i></h4>
-                        <div class="faq-answer">Standard service websites usually take 2 to 3 weeks from initial kickoff to live launch. Complex custom applications or e-commerce platforms take 4 to 6 weeks.</div>
+                <div class="faq-accordion-container">
+                    <div class="faq-card-item open">
+                        <div class="faq-card-question">
+                            <span>How long does a web development project take to complete?</span>
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-card-answer">
+                            Standard business websites typically take 2 to 3 weeks from kickoff to launch. Custom web applications, complex platforms, or e-commerce implementations take 4 to 6 weeks.
+                        </div>
                     </div>
 
-                    <div class="faq-item">
-                        <h4 class="faq-question">How soon will I see SEO ranking improvements on Google? <i class="fa-solid fa-chevron-down"></i></h4>
-                        <div class="faq-answer">Technical fixes and local SEO optimizations often produce visible ranking gains within 30 to 60 days. Comprehensive competitive keyword rankings typically achieve top Page #1 positions within 3 to 6 months.</div>
+                    <div class="faq-card-item">
+                        <div class="faq-card-question">
+                            <span>How quickly will my site see SEO ranking improvements on Google?</span>
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-card-answer">
+                            Technical fixes, speed enhancements, and local SEO optimizations often generate initial indexation and ranking improvements within 30 to 60 days. Highly competitive keyword rankings generally reach Page #1 within 3 to 6 months.
+                        </div>
                     </div>
 
-                    <div class="faq-item">
-                        <h4 class="faq-question">Do you offer post-launch maintenance and support? <i class="fa-solid fa-chevron-down"></i></h4>
-                        <div class="faq-answer">Yes! I provide ongoing maintenance packages including plugin updates, security monitoring, server backups, speed checks, and monthly SEO ranking reports.</div>
+                    <div class="faq-card-item">
+                        <div class="faq-card-question">
+                            <span>Can you work with my existing WordPress, Shopify, or Webflow website?</span>
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-card-answer">
+                            Yes! I regularly audit, optimize, rebuild, and scale existing websites on platforms including WordPress, Shopify, Webflow, Squarespace, and custom HTML/React tech stacks.
+                        </div>
+                    </div>
+
+                    <div class="faq-card-item">
+                        <div class="faq-card-question">
+                            <span>Do you offer ongoing website maintenance and technical SEO support?</span>
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-card-answer">
+                            Yes! I provide monthly maintenance packages including server security monitoring, Core Web Vitals performance checks, plugin updates, automated backups, and detailed monthly SEO rank tracking.
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- CTA Section -->
-        <section class="cta-section">
-            <div class="container text-center">
-                <h2 class="cta-title">Need a Custom Web & SEO Plan?</h2>
-                <p class="cta-subtext">Contact me today for a free website speed audit and SEO consultation.</p>
-                <a href="contact.html" class="btn btn-dark">Get Your Free Consultation</a>
+        <!-- FINAL BRAND MESSAGE & CTA -->
+        <section class="services-final-cta-section">
+            <div class="container services-final-cta-container">
+                <h2 class="final-brand-heading">
+                    BUILD BETTER. <br>
+                    GET FOUND. <br>
+                    <span class="editorial-serif">GROW FURTHER.</span>
+                </h2>
+                <p class="final-brand-lead">
+                    From custom web development to technical SEO and organic growth strategy, I build and optimize digital experiences around real business goals.
+                </p>
+                <div class="final-brand-actions">
+                    <a href="contact.html" class="btn btn-dark magnetic-btn">Let's Work Together <i class="fa-solid fa-arrow-right"></i></a>
+                    <a href="projects.html" class="btn btn-outline magnetic-btn">View Case Studies <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
             </div>
         </section>
     </main>
 
+    <!-- Footer -->
     <footer class="site-footer">
         <div class="container footer-inner">
             <div class="footer-col brand-col">
@@ -218,7 +797,7 @@
                     <span class="brand-name text-white">Saimun Sabit</span>
                     <span class="brand-tag">WEB DEVELOPER & SEO EXPERT</span>
                 </a>
-                <p class="footer-bio">Helping service-based businesses build high-converting websites and rank #1 on Google.</p>
+                <p class="footer-bio">Bridging web development, technical SEO, and digital strategy to engineer high-performance web assets.</p>
             </div>
             <div class="footer-col">
                 <h4 class="footer-heading">Quick Links</h4>
