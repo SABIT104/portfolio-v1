@@ -258,6 +258,122 @@ const PROJECTS_DATA = [
     }
 ];
 
+/* Master Certifications & Credentials Library Store */
+const CERTIFICATIONS_DATA = [
+    {
+        id: "hubspot-tech-seo",
+        title: "HubSpot Technical SEO Certification",
+        organization: "HubSpot Academy",
+        category: "SEO",
+        skillTag: "Technical SEO",
+        skills: ["Technical SEO", "Crawl Budget", "Indexation", "Site Architecture", "Core Web Vitals"],
+        issueDate: "2026",
+        credentialId: "HS-TECH-98241",
+        credentialUrl: "https://academy.hubspot.com/certificates",
+        imageIcon: "fa-solid fa-gears",
+        verified: true,
+        description: "Validates technical crawling, sitemap optimization, canonical tags, HTTP status codes, and Core Web Vitals performance."
+    },
+    {
+        id: "semrush-seo-toolkit",
+        title: "Semrush SEO Toolkit Certification",
+        organization: "Semrush",
+        category: "SEO",
+        skillTag: "SEO Auditing",
+        skills: ["SEO Auditing", "Keyword Research", "Competitive Analysis", "Rank Tracking"],
+        issueDate: "2025",
+        credentialId: "SR-SEO-77312",
+        credentialUrl: "https://www.semrush.com/academy/certificates",
+        imageIcon: "fa-solid fa-magnifying-glass-chart",
+        verified: true,
+        description: "Validates site audit diagnostics, competitor gap analysis, backlink audits, and position tracking telemetry."
+    },
+    {
+        id: "brightlocal-local-seo",
+        title: "BrightLocal Local SEO Academy Certification",
+        organization: "BrightLocal",
+        category: "SEO",
+        skillTag: "Local SEO",
+        skills: ["Local SEO", "Google Business Profile", "NAP Citations", "Local Schema"],
+        issueDate: "2025",
+        credentialId: "BL-LOCAL-44910",
+        credentialUrl: "https://www.brightlocal.com/academy/",
+        imageIcon: "fa-solid fa-location-dot",
+        verified: true,
+        description: "Validates Google Business Profile 3-Pack optimization, NAP directory citation consistency, and geo-targeted landing page structure."
+    },
+    {
+        id: "freecodecamp-responsive-web",
+        title: "Responsive Web Design Certification",
+        organization: "freeCodeCamp",
+        category: "Development",
+        skillTag: "HTML & CSS",
+        skills: ["HTML5", "CSS3", "Flexbox", "CSS Grid", "Responsive Layouts", "Web Accessibility"],
+        issueDate: "2024",
+        credentialId: "FCC-RWD-33918",
+        credentialUrl: "https://www.freecodecamp.org/certification/saimunsabit/responsive-web-design",
+        imageIcon: "fa-solid fa-laptop-code",
+        verified: true,
+        description: "Validates semantic HTML5 markup, CSS Flexbox & Grid layouts, media queries, accessibility (a11y), and fluid responsiveness."
+    },
+    {
+        id: "meta-frontend-dev",
+        title: "Meta Frontend Developer Certification",
+        organization: "Meta / Coursera",
+        category: "Development",
+        skillTag: "React",
+        skills: ["React.js", "JavaScript (ES6+)", "UI Components", "State Management", "Git & GitHub"],
+        issueDate: "2025",
+        credentialId: "META-FED-88192",
+        credentialUrl: "https://www.coursera.org/verify/professional-cert/meta-frontend-developer",
+        imageIcon: "fa-brands fa-react",
+        verified: true,
+        description: "Validates component-driven React application development, custom hooks, DOM event handling, and single-page app architecture."
+    },
+    {
+        id: "google-analytics-4",
+        title: "Google Analytics 4 Certification",
+        organization: "Google",
+        category: "SEO",
+        skillTag: "Analytics & Reporting",
+        skills: ["Analytics & Reporting", "GA4 Event Tracking", "Conversion Funnels", "Google Search Console"],
+        issueDate: "2026",
+        credentialId: "GOOG-GA4-10293",
+        credentialUrl: "https://skillshop.exceedlms.com/student/award/ga4-certification",
+        imageIcon: "fa-solid fa-chart-pie",
+        verified: true,
+        description: "Validates Google Analytics 4 custom event tracking, e-commerce conversion funnel analytics, and Google Search Console telemetry."
+    },
+    {
+        id: "hubspot-content-marketing",
+        title: "HubSpot Content Marketing & On-Page SEO",
+        organization: "HubSpot Academy",
+        category: "SEO",
+        skillTag: "On-Page SEO",
+        skills: ["On-Page SEO", "Content Optimization", "Keyword Strategy", "Search Intent"],
+        issueDate: "2024",
+        credentialId: "HS-CONT-11928",
+        credentialUrl: "https://academy.hubspot.com/certificates",
+        imageIcon: "fa-solid fa-file-pen",
+        verified: true,
+        description: "Validates buyer intent keyword mapping, content cluster structuring, heading tag hierarchy, and organic content optimization."
+    },
+    {
+        id: "javascript-algorithms-fcc",
+        title: "JavaScript Algorithms & Data Structures",
+        organization: "freeCodeCamp",
+        category: "Development",
+        skillTag: "JavaScript",
+        skills: ["JavaScript (ES6+)", "DOM Manipulation", "Async/Await", "REST APIs", "Algorithm Logic"],
+        issueDate: "2025",
+        credentialId: "FCC-JS-55019",
+        credentialUrl: "https://www.freecodecamp.org/certification/saimunsabit/javascript-algorithms-and-data-structures",
+        imageIcon: "fa-brands fa-js",
+        verified: true,
+        description: "Validates ES6+ JavaScript syntax, asynchronous promises/fetch API, array methods, DOM manipulation, and problem-solving logic."
+    }
+];
+
 document.addEventListener('DOMContentLoaded', () => {
     initNavigation();
     initLivingHeroEcosystem();
@@ -274,6 +390,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initServicesFaqAccordion();
     initPillarSmoothScroll();
     initCaseStudiesPage();
+    initCertificationsPage();
 });
 
 /* ==========================================================================
@@ -286,7 +403,6 @@ function initNavigation() {
     const drawerClose = document.getElementById('drawer-close');
     const drawerBackdrop = document.getElementById('drawer-backdrop');
 
-    // Sticky Scroll Header
     window.addEventListener('scroll', () => {
         if (window.scrollY > 40) {
             header?.classList.add('scrolled');
@@ -295,7 +411,6 @@ function initNavigation() {
         }
     });
 
-    // Drawer Open/Close Controls
     const openDrawer = () => {
         mobileDrawer?.classList.add('open');
         drawerBackdrop?.classList.add('open');
@@ -360,7 +475,7 @@ function initLivingHeroEcosystem() {
     animate();
 }
 
-/* 03 — Bento Tilt Physics */
+/* Bento Tilt Physics */
 function initBentoTiltPhysics() {
     const cards = document.querySelectorAll('.bento-card');
     cards.forEach(card => {
@@ -377,7 +492,7 @@ function initBentoTiltPhysics() {
     });
 }
 
-/* Magnetic Button Feel */
+/* Magnetic Buttons */
 function initMagneticButtons() {
     const btns = document.querySelectorAll('.magnetic-btn');
     btns.forEach(btn => {
@@ -408,7 +523,7 @@ function initScrollStory() {
     elements.forEach(el => observer.observe(el));
 }
 
-/* 04 — Layered Case Study Switcher */
+/* Layered Case Study Switcher */
 function initLayeredCaseStudy() {
     const tabs = document.querySelectorAll('.layer-tab');
     const panels = document.querySelectorAll('.layer-panel');
@@ -435,7 +550,7 @@ function initLayeredCaseStudy() {
     });
 }
 
-/* 05 — Live Skill Map Inspector */
+/* Skill Map Tree */
 function initSkillMapTree() {
     const nodes = document.querySelectorAll('.tree-node');
     const title = document.getElementById('inspector-title');
@@ -479,7 +594,7 @@ function initSkillMapTree() {
     }
 }
 
-/* 06 — Compact Proof Wall Inspector */
+/* Proof Wall */
 function initProofWall() {
     const tiles = document.querySelectorAll('.proof-tile');
     const display = document.getElementById('proof-detail-display');
@@ -526,7 +641,7 @@ function initAboutCounterStats() {
     counters.forEach(counter => observer.observe(counter));
 }
 
-/* About Tech Node Pills Interaction */
+/* About Tech Node Pills */
 function initAboutTechNodePills() {
     const pills = document.querySelectorAll('.tech-node-pill');
     pills.forEach(pill => {
@@ -604,9 +719,7 @@ function initPillarSmoothScroll() {
     });
 }
 
-/* ==========================================================================
-   07 — Service-Wise Interactive Case Studies Engine (projects.html)
-   ========================================================================== */
+/* Case Studies Interactive Engine */
 function initCaseStudiesPage() {
     const gridContainer = document.getElementById('projects-dynamic-grid');
     const filterPills = document.querySelectorAll('.service-filter-pill');
@@ -617,11 +730,10 @@ function initCaseStudiesPage() {
     const modalBackdrop = document.getElementById('modal-backdrop');
     const modalCloseBtn = document.getElementById('modal-close-btn');
 
-    if (!gridContainer) return; // Only execute on projects.html
+    if (!gridContainer) return;
 
     let currentFilter = 'All';
 
-    // Render Case Studies Cards
     function renderProjects(filter = 'All') {
         currentFilter = filter;
         gridContainer.innerHTML = '';
@@ -630,7 +742,6 @@ function initCaseStudiesPage() {
             ? PROJECTS_DATA 
             : PROJECTS_DATA.filter(p => p.services.includes(filter));
 
-        // Update Active Indicator Text & Count
         if (activeFilterLabel) activeFilterLabel.textContent = filter === 'All' ? 'All Services' : filter;
         if (activeCountBadge) activeCountBadge.textContent = `${filtered.length} Project${filtered.length === 1 ? '' : 's'}`;
 
@@ -664,7 +775,6 @@ function initCaseStudiesPage() {
             gridContainer.appendChild(card);
         });
 
-        // Add Card Click Listeners for Modal Trigger
         gridContainer.querySelectorAll('.btn-view-case-study').forEach(btn => {
             btn.addEventListener('click', (e) => {
                 const id = e.currentTarget.getAttribute('data-id');
@@ -672,7 +782,6 @@ function initCaseStudiesPage() {
             });
         });
 
-        // Add Clickable Service Chip Listeners inside Card
         gridContainer.querySelectorAll('.project-tag-chip').forEach(chip => {
             chip.addEventListener('click', (e) => {
                 e.stopPropagation();
@@ -682,7 +791,6 @@ function initCaseStudiesPage() {
         });
     }
 
-    // Apply Filter Function
     function applyFilter(serviceName) {
         filterPills.forEach(pill => {
             const pillVal = pill.getAttribute('data-service');
@@ -691,7 +799,6 @@ function initCaseStudiesPage() {
         renderProjects(serviceName);
     }
 
-    // Filter Pill Click Handlers
     filterPills.forEach(pill => {
         pill.addEventListener('click', (e) => {
             const service = e.currentTarget.getAttribute('data-service');
@@ -699,12 +806,10 @@ function initCaseStudiesPage() {
         });
     });
 
-    // Clear Filter Button Click
     clearFilterBtn?.addEventListener('click', () => {
         applyFilter('All');
     });
 
-    // Open Case Study Modal
     function openCaseStudyModal(projectId) {
         const project = PROJECTS_DATA.find(p => p.id === projectId);
         if (!project || !modal) return;
@@ -728,21 +833,18 @@ function initCaseStudiesPage() {
         if (modalChallenge) modalChallenge.textContent = project.challenge;
         if (modalApproach) modalApproach.textContent = project.approach;
 
-        // Deliverables Checklist
         if (modalDeliverables) {
             modalDeliverables.innerHTML = project.deliverables.map(d => 
                 `<li><i class="fa-solid fa-circle-check"></i> ${d}</li>`
             ).join('');
         }
 
-        // Tech Stack Pills
         if (modalTechList) {
             modalTechList.innerHTML = project.technologies.map(t => 
                 `<span class="tech-node-pill active">${t}</span>`
             ).join('');
         }
 
-        // Results Grid
         if (modalResultsGrid) {
             modalResultsGrid.innerHTML = project.results.map(r => `
                 <div class="modal-result-card">
@@ -752,7 +854,6 @@ function initCaseStudiesPage() {
             `).join('');
         }
 
-        // Services Tags (Clicking a tag closes modal & filters by that service!)
         if (modalServicesTags) {
             modalServicesTags.innerHTML = project.services.map(s => 
                 `<button class="modal-service-btn" data-service="${s}">${s}</button>`
@@ -767,7 +868,6 @@ function initCaseStudiesPage() {
             });
         }
 
-        // Related Projects
         if (modalRelatedGrid) {
             const relatedProjects = PROJECTS_DATA.filter(p => project.relatedIds?.includes(p.id));
             modalRelatedGrid.innerHTML = relatedProjects.map(rel => `
@@ -789,13 +889,11 @@ function initCaseStudiesPage() {
             });
         }
 
-        // Show Modal Overlay
         modal.classList.add('open');
         modalBackdrop?.classList.add('open');
         document.body.style.overflow = 'hidden';
     }
 
-    // Close Case Study Modal
     function closeCaseStudyModal() {
         modal?.classList.remove('open');
         modalBackdrop?.classList.remove('open');
@@ -805,13 +903,199 @@ function initCaseStudiesPage() {
     modalCloseBtn?.addEventListener('click', closeCaseStudyModal);
     modalBackdrop?.addEventListener('click', closeCaseStudyModal);
 
-    // ESC Key Listener
     window.addEventListener('keydown', (e) => {
         if (e.key === 'Escape' && modal?.classList.contains('open')) {
             closeCaseStudyModal();
         }
     });
 
-    // Initial Render
     renderProjects('All');
+}
+
+/* ==========================================================================
+   08 — Verified Skills & Certifications Library Engine (certifications.html)
+   ========================================================================== */
+function initCertificationsPage() {
+    const gridContainer = document.getElementById('certifications-dynamic-grid');
+    const skillPills = document.querySelectorAll('.cert-skill-pill');
+    const providerPills = document.querySelectorAll('.cert-provider-pill');
+    const activeSkillLabel = document.getElementById('cert-active-skill-label');
+    const activeCountBadge = document.getElementById('cert-active-count-badge');
+    const clearFiltersBtn = document.getElementById('cert-clear-filters-btn');
+    const statCertCount = document.getElementById('stat-cert-count');
+    const statSkillCount = document.getElementById('stat-skill-count');
+    const statPlatformCount = document.getElementById('stat-platform-count');
+
+    const modal = document.getElementById('certificate-modal');
+    const modalBackdrop = document.getElementById('cert-modal-backdrop');
+    const modalCloseBtn = document.getElementById('cert-modal-close-btn');
+
+    if (!gridContainer) return; // Only execute on certifications.html
+
+    let activeSkill = 'All';
+    let activeProvider = 'All';
+
+    // Calculate Real-Time Stats Overview
+    const allSkillsSet = new Set(CERTIFICATIONS_DATA.flatMap(c => c.skills));
+    const allPlatformsSet = new Set(CERTIFICATIONS_DATA.map(c => c.organization));
+
+    if (statCertCount) statCertCount.textContent = `${CERTIFICATIONS_DATA.length}+`;
+    if (statSkillCount) statSkillCount.textContent = `${allSkillsSet.size}+`;
+    if (statPlatformCount) statPlatformCount.textContent = `${allPlatformsSet.size}+`;
+
+    // Render Certifications Cards
+    function renderCertifications() {
+        gridContainer.innerHTML = '';
+
+        let filtered = CERTIFICATIONS_DATA;
+
+        if (activeSkill !== 'All') {
+            filtered = filtered.filter(c => c.skillTag === activeSkill || c.skills.includes(activeSkill));
+        }
+
+        if (activeProvider !== 'All') {
+            filtered = filtered.filter(c => c.organization === activeProvider);
+        }
+
+        // Update Active Indicator Text & Count
+        const labelText = (activeSkill !== 'All' ? activeSkill : '') + (activeSkill !== 'All' && activeProvider !== 'All' ? ' · ' : '') + (activeProvider !== 'All' ? activeProvider : '');
+        if (activeSkillLabel) activeSkillLabel.textContent = labelText || 'All Credentials';
+        if (activeCountBadge) activeCountBadge.textContent = `${filtered.length} Certification${filtered.length === 1 ? '' : 's'}`;
+
+        if (filtered.length === 0) {
+            gridContainer.innerHTML = `
+                <div class="empty-certs-box">
+                    <i class="fa-solid fa-award"></i>
+                    <h3>More Certifications Coming Soon</h3>
+                    <p>I am continuously expanding my verified credentials. Try clearing your active filters to view all credentials.</p>
+                </div>
+            `;
+            return;
+        }
+
+        filtered.forEach(cert => {
+            const card = document.createElement('div');
+            card.className = 'cert-card-editorial reveal-on-scroll revealed';
+            card.setAttribute('data-id', cert.id);
+
+            const skillBadgeHTML = `<span class="cert-skill-tag"><i class="fa-solid fa-circle-check"></i> ${cert.skillTag}</span>`;
+
+            card.innerHTML = `
+                <div class="cert-card-header">
+                    <div class="cert-provider-badge"><i class="${cert.imageIcon}"></i> ${cert.organization}</div>
+                    ${skillBadgeHTML}
+                </div>
+                <h3 class="cert-card-title">${cert.title}</h3>
+                <p class="cert-card-desc">${cert.description}</p>
+                <div class="cert-meta-row mb-3">
+                    <span><i class="fa-solid fa-calendar-check"></i> Issued: ${cert.issueDate}</span>
+                    <span><i class="fa-solid fa-shield-halved"></i> ID: ${cert.credentialId}</span>
+                </div>
+                <div class="cert-card-footer">
+                    <span class="cert-verified-pill"><i class="fa-solid fa-circle-check"></i> Verified</span>
+                    <button class="btn-view-cert magnetic-btn" data-id="${cert.id}">
+                        View Certificate <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+                </div>
+            `;
+
+            gridContainer.appendChild(card);
+        });
+
+        // Add Click Handlers for Modal
+        gridContainer.querySelectorAll('.btn-view-cert').forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                const id = e.currentTarget.getAttribute('data-id');
+                openCertificateModal(id);
+            });
+        });
+    }
+
+    // Skill Filter Handlers
+    skillPills.forEach(pill => {
+        pill.addEventListener('click', (e) => {
+            skillPills.forEach(p => p.classList.remove('active'));
+            e.currentTarget.classList.add('active');
+            activeSkill = e.currentTarget.getAttribute('data-skill');
+            renderCertifications();
+        });
+    });
+
+    // Provider Filter Handlers
+    providerPills.forEach(pill => {
+        pill.addEventListener('click', (e) => {
+            providerPills.forEach(p => p.classList.remove('active'));
+            e.currentTarget.classList.add('active');
+            activeProvider = e.currentTarget.getAttribute('data-provider');
+            renderCertifications();
+        });
+    });
+
+    // Clear Filters Handler
+    clearFiltersBtn?.addEventListener('click', () => {
+        skillPills.forEach(p => p.classList.remove('active'));
+        providerPills.forEach(p => p.classList.remove('active'));
+        if (skillPills[0]) skillPills[0].classList.add('active');
+        if (providerPills[0]) providerPills[0].classList.add('active');
+        activeSkill = 'All';
+        activeProvider = 'All';
+        renderCertifications();
+    });
+
+    // Open Full Certificate Viewer Modal
+    function openCertificateModal(certId) {
+        const cert = CERTIFICATIONS_DATA.find(c => c.id === certId);
+        if (!cert || !modal) return;
+
+        const modalTitle = document.getElementById('modal-cert-title');
+        const modalOrg = document.getElementById('modal-cert-org');
+        const modalTag = document.getElementById('modal-cert-tag');
+        const modalDate = document.getElementById('modal-cert-date');
+        const modalId = document.getElementById('modal-cert-id');
+        const modalDesc = document.getElementById('modal-cert-desc');
+        const modalSkills = document.getElementById('modal-cert-skills');
+        const modalVerifyBtn = document.getElementById('modal-cert-verify-btn');
+        const modalIcon = document.getElementById('modal-cert-icon');
+
+        if (modalTitle) modalTitle.textContent = cert.title;
+        if (modalOrg) modalOrg.textContent = cert.organization;
+        if (modalTag) modalTag.textContent = cert.skillTag;
+        if (modalDate) modalDate.textContent = cert.issueDate;
+        if (modalId) modalId.textContent = cert.credentialId;
+        if (modalDesc) modalDesc.textContent = cert.description;
+        if (modalIcon) modalIcon.className = cert.imageIcon;
+
+        if (modalSkills) {
+            modalSkills.innerHTML = cert.skills.map(s => 
+                `<span class="subservice-chip"><i class="fa-solid fa-check"></i> ${s}</span>`
+            ).join('');
+        }
+
+        if (modalVerifyBtn && cert.credentialUrl) {
+            modalVerifyBtn.href = cert.credentialUrl;
+        }
+
+        modal.classList.add('open');
+        modalBackdrop?.classList.add('open');
+        document.body.style.overflow = 'hidden';
+    }
+
+    // Close Modal Handler
+    function closeCertificateModal() {
+        modal?.classList.remove('open');
+        modalBackdrop?.classList.remove('open');
+        document.body.style.overflow = '';
+    }
+
+    modalCloseBtn?.addEventListener('click', closeCertificateModal);
+    modalBackdrop?.addEventListener('click', closeCertificateModal);
+
+    window.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && modal?.classList.contains('open')) {
+            closeCertificateModal();
+        }
+    });
+
+    // Initial Render
+    renderCertifications();
 }
