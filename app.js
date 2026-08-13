@@ -41,7 +41,7 @@ const SKILL_MAP_DATA = {
     }
 };
 
-/* Master Case Studies Data Store (Many-to-Many Relationship with Services) */
+/* Master Case Studies Data Store */
 const PROJECTS_DATA = [
     {
         id: "healthcare-practice",
@@ -374,6 +374,161 @@ const CERTIFICATIONS_DATA = [
     }
 ];
 
+/* Master Digital Journal Articles Data Store */
+const BLOG_ARTICLES_DATA = [
+    {
+        id: "core-web-vitals-react-nextjs",
+        title: "Optimizing Core Web Vitals in Modern React & Next.js Applications",
+        category: "Web Development",
+        world: "BUILD",
+        tags: ["React.js", "Next.js", "Core Web Vitals", "Performance"],
+        featured: true,
+        readingTime: "8 min read",
+        publishDate: "August 10, 2026",
+        author: "Saimun Sabit",
+        coverIcon: "fa-brands fa-react",
+        excerpt: "A deep technical dive into LCP image optimization, INP event queue tuning, and critical inline CSS strategies for Next.js 15 apps.",
+        content: `
+            <h2>Introduction to Core Web Vitals in Next.js</h2>
+            <p>Core Web Vitals are no longer just performance metrics—they are primary Google search ranking factors. In modern single-page applications and server-side rendered frameworks like Next.js 15, component hydration, dynamic imports, and image loading pipelines dictate your site's PageSpeed score.</p>
+            
+            <div class="article-code-block">
+                <code>// Next.js Image Component Optimization
+import Image from 'next/image';
+
+export default function HeroBanner() {
+    return (
+        &lt;Image 
+            src="/hero.webp" 
+            alt="Hero Banner" 
+            width={1200} 
+            height={600} 
+            priority={true} 
+            quality={90} 
+        /&gt;
+    );
+}</code>
+            </div>
+
+            <h2>1. Largest Contentful Paint (LCP) Fixes</h2>
+            <p>Preloading LCP image assets, eliminating render-blocking web fonts, and deferring non-critical JavaScript execution is the first step towards achieving a 99/100 Google PageSpeed score.</p>
+
+            <div class="article-callout-box">
+                <h4><i class="fa-solid fa-lightbulb"></i> Developer Insight</h4>
+                <p>Always avoid using heavy external font stylesheets inside the head tag. Use Next.js <code>next/font</code> to automatically inline font CSS files locally at build time.</p>
+            </div>
+
+            <h2>2. Interaction to Next Paint (INP) Queue Optimization</h2>
+            <p>INP measures page responsiveness. Breaking long JavaScript tasks into smaller micro-tasks using <code>requestIdleCallback()</code> ensures the main thread stays responsive to user clicks and taps.</p>
+        `,
+        relatedIds: ["technical-seo-audit-checklist", "javascript-async-performance-patterns"]
+    },
+    {
+        id: "technical-seo-audit-checklist",
+        title: "The 2026 Technical SEO Audit Checklist for Enterprise Sites",
+        category: "SEO",
+        world: "GROW",
+        tags: ["Technical SEO", "Crawl Budget", "Schema.org", "Google Search Console"],
+        featured: false,
+        readingTime: "12 min read",
+        publishDate: "August 04, 2026",
+        author: "Saimun Sabit",
+        coverIcon: "fa-solid fa-gears",
+        excerpt: "How to audit crawl budget bottlenecks, canonical tag loops, robots.txt directives, and JSON-LD structured data on large websites.",
+        content: `
+            <h2>Why Technical SEO Matters First</h2>
+            <p>Great content cannot rank if Googlebot cannot crawl or index your site structure efficiently. Here is the step-by-step diagnostic checklist engineered for large-scale web platforms.</p>
+
+            <div class="article-callout-box">
+                <h4><i class="fa-solid fa-shield-halved"></i> Technical Audit Checklist</h4>
+                <p>1. Check Google Search Console Indexation reports.<br>
+                2. Audit XML sitemaps for 404 or redirected URLs.<br>
+                3. Inspect self-referencing Canonical tags.<br>
+                4. Validate JSON-LD Schema markup with Google Rich Results Test.</p>
+            </div>
+
+            <h2>Resolving Canonical & Crawl Budget Bottlenecks</h2>
+            <p>Parameter-heavy URLs and faceted search filters can generate thousands of duplicate URL variations that waste Googlebot's crawl budget. Implementing self-referencing canonicals and parameter handling directives resolves indexation bloat.</p>
+        `,
+        relatedIds: ["core-web-vitals-react-nextjs", "local-seo-google-maps-3pack"]
+    },
+    {
+        id: "local-seo-google-maps-3pack",
+        title: "Dominating the Google Maps 3-Pack: A Local Business Playbook",
+        category: "SEO",
+        world: "GROW",
+        tags: ["Local SEO", "Google Business Profile", "NAP Consistency", "Local Schema"],
+        featured: false,
+        readingTime: "6 min read",
+        publishDate: "July 28, 2026",
+        author: "Saimun Sabit",
+        coverIcon: "fa-solid fa-location-dot",
+        excerpt: "A tactical guide to optimizing Google Business Profiles, geotagging media, and building consistent NAP citations for local service dominance.",
+        content: `
+            <h2>The Local Map Pack Ranking Algorithm</h2>
+            <p>Proximity, prominence, and relevance govern local map pack rankings. To secure a permanent spot in Google's local 3-Pack, local business owners must align their Google Business Profile data with website landing pages.</p>
+
+            <h2>Injecting LocalBusiness JSON-LD Schema</h2>
+            <p>Embedding structured Schema markup helps search engines connect your physical business address, service radius, and phone number directly to your website domain.</p>
+        `,
+        relatedIds: ["technical-seo-audit-checklist", "ecommerce-shopify-seo-architecture"]
+    },
+    {
+        id: "javascript-async-performance-patterns",
+        title: "Asynchronous JavaScript Performance & Hydration Patterns",
+        category: "Web Development",
+        world: "BUILD",
+        tags: ["JavaScript", "Async/Await", "Performance", "Web APIs"],
+        featured: false,
+        readingTime: "9 min read",
+        publishDate: "July 20, 2026",
+        author: "Saimun Sabit",
+        coverIcon: "fa-brands fa-js",
+        excerpt: "Mastering non-blocking main thread execution, Web Workers, and IntersectionObserver lazy loading for zero-jank UIs.",
+        content: `
+            <h2>Non-Blocking JavaScript Execution</h2>
+            <p>Executing heavy data processing or sorting algorithms directly on the main UI thread causes dropped frames and poor user experience. Web Workers and asynchronous event loops keep interfaces silky smooth.</p>
+        `,
+        relatedIds: ["core-web-vitals-react-nextjs"]
+    },
+    {
+        id: "future-of-ai-and-web-development",
+        title: "The Evolving Role of Developers in the Age of Autonomous AI",
+        category: "General",
+        world: "THINK",
+        tags: ["Technology", "AI & Web", "Career Strategy", "Digital Culture"],
+        featured: false,
+        readingTime: "7 min read",
+        publishDate: "July 15, 2026",
+        author: "Saimun Sabit",
+        coverIcon: "fa-solid fa-brain",
+        excerpt: "Why understanding business logic, architecture, and user intent matters more than writing boilerplate code in modern web engineering.",
+        content: `
+            <h2>Beyond Code Syntax</h2>
+            <p>AI tools can generate code snippets rapidly, but they cannot replace system architecture design, performance debugging, or solving real business problems. The future belongs to developers who bridge technical code with search intent and user conversion strategy.</p>
+        `,
+        relatedIds: ["core-web-vitals-react-nextjs"]
+    },
+    {
+        id: "ecommerce-shopify-seo-architecture",
+        title: "E-commerce Catalog Architecture & Faceted Navigation SEO",
+        category: "SEO",
+        world: "GROW",
+        tags: ["E-commerce SEO", "Shopify", "Product Schema", "Faceted Navigation"],
+        featured: false,
+        readingTime: "10 min read",
+        publishDate: "July 08, 2026",
+        author: "Saimun Sabit",
+        coverIcon: "fa-solid fa-cart-shopping",
+        excerpt: "Preventing duplicate content indexation bloat while scaling product category rankings on Shopify and WooCommerce stores.",
+        content: `
+            <h2>Structuring E-commerce Collections</h2>
+            <p>E-commerce stores often struggle with thin category pages and duplicate filter URLs. Restructuring collection hierarchies and injecting Offer JSON-LD schema increases organic search traffic and rich snippet placement.</p>
+        `,
+        relatedIds: ["technical-seo-audit-checklist", "local-seo-google-maps-3pack"]
+    }
+];
+
 document.addEventListener('DOMContentLoaded', () => {
     initNavigation();
     initLivingHeroEcosystem();
@@ -391,6 +546,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initPillarSmoothScroll();
     initCaseStudiesPage();
     initCertificationsPage();
+    initBlogPage();
 });
 
 /* ==========================================================================
@@ -428,7 +584,7 @@ function initNavigation() {
     drawerBackdrop?.addEventListener('click', closeDrawer);
 }
 
-/* 02 — Living Hero Ecosystem */
+/* Living Hero Ecosystem */
 function initLivingHeroEcosystem() {
     const canvas = document.getElementById('living-hero-canvas');
     if (!canvas) return;
@@ -912,9 +1068,7 @@ function initCaseStudiesPage() {
     renderProjects('All');
 }
 
-/* ==========================================================================
-   08 — Verified Skills & Certifications Library Engine (certifications.html)
-   ========================================================================== */
+/* Certifications Library Engine */
 function initCertificationsPage() {
     const gridContainer = document.getElementById('certifications-dynamic-grid');
     const skillPills = document.querySelectorAll('.cert-skill-pill');
@@ -930,12 +1084,11 @@ function initCertificationsPage() {
     const modalBackdrop = document.getElementById('cert-modal-backdrop');
     const modalCloseBtn = document.getElementById('cert-modal-close-btn');
 
-    if (!gridContainer) return; // Only execute on certifications.html
+    if (!gridContainer) return;
 
     let activeSkill = 'All';
     let activeProvider = 'All';
 
-    // Calculate Real-Time Stats Overview
     const allSkillsSet = new Set(CERTIFICATIONS_DATA.flatMap(c => c.skills));
     const allPlatformsSet = new Set(CERTIFICATIONS_DATA.map(c => c.organization));
 
@@ -943,7 +1096,6 @@ function initCertificationsPage() {
     if (statSkillCount) statSkillCount.textContent = `${allSkillsSet.size}+`;
     if (statPlatformCount) statPlatformCount.textContent = `${allPlatformsSet.size}+`;
 
-    // Render Certifications Cards
     function renderCertifications() {
         gridContainer.innerHTML = '';
 
@@ -957,7 +1109,6 @@ function initCertificationsPage() {
             filtered = filtered.filter(c => c.organization === activeProvider);
         }
 
-        // Update Active Indicator Text & Count
         const labelText = (activeSkill !== 'All' ? activeSkill : '') + (activeSkill !== 'All' && activeProvider !== 'All' ? ' · ' : '') + (activeProvider !== 'All' ? activeProvider : '');
         if (activeSkillLabel) activeSkillLabel.textContent = labelText || 'All Credentials';
         if (activeCountBadge) activeCountBadge.textContent = `${filtered.length} Certification${filtered.length === 1 ? '' : 's'}`;
@@ -1002,7 +1153,6 @@ function initCertificationsPage() {
             gridContainer.appendChild(card);
         });
 
-        // Add Click Handlers for Modal
         gridContainer.querySelectorAll('.btn-view-cert').forEach(btn => {
             btn.addEventListener('click', (e) => {
                 const id = e.currentTarget.getAttribute('data-id');
@@ -1011,7 +1161,6 @@ function initCertificationsPage() {
         });
     }
 
-    // Skill Filter Handlers
     skillPills.forEach(pill => {
         pill.addEventListener('click', (e) => {
             skillPills.forEach(p => p.classList.remove('active'));
@@ -1021,7 +1170,6 @@ function initCertificationsPage() {
         });
     });
 
-    // Provider Filter Handlers
     providerPills.forEach(pill => {
         pill.addEventListener('click', (e) => {
             providerPills.forEach(p => p.classList.remove('active'));
@@ -1031,7 +1179,6 @@ function initCertificationsPage() {
         });
     });
 
-    // Clear Filters Handler
     clearFiltersBtn?.addEventListener('click', () => {
         skillPills.forEach(p => p.classList.remove('active'));
         providerPills.forEach(p => p.classList.remove('active'));
@@ -1042,7 +1189,6 @@ function initCertificationsPage() {
         renderCertifications();
     });
 
-    // Open Full Certificate Viewer Modal
     function openCertificateModal(certId) {
         const cert = CERTIFICATIONS_DATA.find(c => c.id === certId);
         if (!cert || !modal) return;
@@ -1080,7 +1226,6 @@ function initCertificationsPage() {
         document.body.style.overflow = 'hidden';
     }
 
-    // Close Modal Handler
     function closeCertificateModal() {
         modal?.classList.remove('open');
         modalBackdrop?.classList.remove('open');
@@ -1096,6 +1241,246 @@ function initCertificationsPage() {
         }
     });
 
-    // Initial Render
     renderCertifications();
+}
+
+/* ==========================================================================
+   09 — Digital Journal & Blog Engine (blog.html)
+   ========================================================================== */
+function initBlogPage() {
+    const gridContainer = document.getElementById('blog-dynamic-grid');
+    const searchInput = document.getElementById('blog-search-input');
+    const categoryPills = document.querySelectorAll('.blog-category-pill');
+    const activeCategoryLabel = document.getElementById('blog-active-category-label');
+    const activeCountBadge = document.getElementById('blog-active-count-badge');
+    const clearFiltersBtn = document.getElementById('blog-clear-filters-btn');
+
+    const modal = document.getElementById('article-modal');
+    const modalBackdrop = document.getElementById('article-modal-backdrop');
+    const modalCloseBtn = document.getElementById('article-modal-close-btn');
+    const progressBar = document.getElementById('reading-progress-bar');
+    const modalContainer = modal?.querySelector('.modal-content-container');
+
+    if (!gridContainer && !document.querySelector('body[data-page="blog"]')) return;
+
+    let activeCategory = 'All';
+    let searchQuery = '';
+
+    // Bind Read Article buttons across the entire document (Cover Story, Static Sections & Dynamic Grid)
+    function bindAllArticleButtons() {
+        document.querySelectorAll('.btn-read-article').forEach(btn => {
+            btn.removeEventListener('click', handleArticleButtonClick);
+            btn.addEventListener('click', handleArticleButtonClick);
+        });
+    }
+
+    function handleArticleButtonClick(e) {
+        const id = e.currentTarget.getAttribute('data-id');
+        if (id) openArticleModal(id);
+    }
+
+    // Filter Static & Dynamic Articles
+    function filterAllArticles() {
+        const query = searchQuery.trim().toLowerCase();
+        let totalVisible = 0;
+
+        // Filter all editorial cards in static sections & dynamic grid
+        document.querySelectorAll('.blog-card-editorial').forEach(card => {
+            const title = card.querySelector('.blog-card-title')?.textContent.toLowerCase() || '';
+            const desc = card.querySelector('.blog-card-desc')?.textContent.toLowerCase() || '';
+            const isBuild = card.classList.contains('world-build');
+            const isGrow = card.classList.contains('world-grow');
+            const isThink = card.classList.contains('world-think');
+
+            let matchesCategory = true;
+            if (activeCategory === 'BUILD') matchesCategory = isBuild;
+            else if (activeCategory === 'GROW') matchesCategory = isGrow;
+            else if (activeCategory === 'THINK') matchesCategory = isThink;
+
+            let matchesSearch = true;
+            if (query !== '') {
+                matchesSearch = title.includes(query) || desc.includes(query);
+            }
+
+            if (matchesCategory && matchesSearch) {
+                card.style.display = '';
+                totalVisible++;
+            } else {
+                card.style.display = 'none';
+            }
+        });
+
+        // Also handle dynamic grid rendering
+        if (gridContainer) {
+            renderDynamicGrid(query);
+        }
+
+        if (activeCategoryLabel) activeCategoryLabel.textContent = activeCategory === 'All' ? 'All Articles' : activeCategory;
+        if (activeCountBadge) activeCountBadge.textContent = `${totalVisible} Article${totalVisible === 1 ? '' : 's'}`;
+
+        bindAllArticleButtons();
+    }
+
+    function renderDynamicGrid(query) {
+        gridContainer.innerHTML = '';
+
+        let filtered = BLOG_ARTICLES_DATA;
+
+        if (activeCategory !== 'All') {
+            filtered = filtered.filter(a => a.category === activeCategory || a.world === activeCategory);
+        }
+
+        if (query !== '') {
+            filtered = filtered.filter(a => 
+                a.title.toLowerCase().includes(query) ||
+                a.excerpt.toLowerCase().includes(query) ||
+                a.category.toLowerCase().includes(query) ||
+                a.tags.some(t => t.toLowerCase().includes(query))
+            );
+        }
+
+        if (filtered.length === 0) {
+            gridContainer.innerHTML = `
+                <div class="empty-certs-box">
+                    <i class="fa-solid fa-newspaper"></i>
+                    <h3>No Matching Articles</h3>
+                    <p>Try searching for a different keyword or select another category.</p>
+                </div>
+            `;
+            return;
+        }
+
+        filtered.forEach(article => {
+            const card = document.createElement('div');
+            card.className = `blog-card-editorial world-${article.world.toLowerCase()} reveal-on-scroll revealed`;
+            card.setAttribute('data-id', article.id);
+
+            const tagsHTML = article.tags.map(t => `<span class="project-tag-chip">${t}</span>`).join('');
+
+            card.innerHTML = `
+                <div class="blog-card-header">
+                    <span class="blog-world-badge world-${article.world.toLowerCase()}">${article.world} &middot; ${article.category}</span>
+                    <span class="blog-reading-time"><i class="fa-regular fa-clock"></i> ${article.readingTime}</span>
+                </div>
+                <h3 class="blog-card-title">${article.title}</h3>
+                <p class="blog-card-desc">${article.excerpt}</p>
+                <div class="project-tags-list mb-3">
+                    ${tagsHTML}
+                </div>
+                <div class="blog-card-footer">
+                    <span class="blog-meta-date"><i class="fa-regular fa-calendar"></i> ${article.publishDate}</span>
+                    <button class="btn-read-article magnetic-btn" data-id="${article.id}">
+                        Read Article <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+                </div>
+            `;
+
+            gridContainer.appendChild(card);
+        });
+    }
+
+    // Search Input Event Listener
+    searchInput?.addEventListener('input', (e) => {
+        searchQuery = e.target.value;
+        filterAllArticles();
+    });
+
+    // Category Pills Event Listener
+    categoryPills.forEach(pill => {
+        pill.addEventListener('click', (e) => {
+            categoryPills.forEach(p => p.classList.remove('active'));
+            e.currentTarget.classList.add('active');
+            activeCategory = e.currentTarget.getAttribute('data-category');
+            filterAllArticles();
+        });
+    });
+
+    // Clear Filters Event Listener
+    clearFiltersBtn?.addEventListener('click', () => {
+        categoryPills.forEach(p => p.classList.remove('active'));
+        if (categoryPills[0]) categoryPills[0].classList.add('active');
+        if (searchInput) searchInput.value = '';
+        activeCategory = 'All';
+        searchQuery = '';
+        filterAllArticles();
+    });
+
+    // Open Article Modal Function
+    function openArticleModal(articleId) {
+        const article = BLOG_ARTICLES_DATA.find(a => a.id === articleId);
+        if (!article || !modal) return;
+
+        const modalTitle = document.getElementById('modal-article-title');
+        const modalCategory = document.getElementById('modal-article-category');
+        const modalAuthor = document.getElementById('modal-article-author');
+        const modalDate = document.getElementById('modal-article-date');
+        const modalTime = document.getElementById('modal-article-time');
+        const modalBody = document.getElementById('modal-article-body');
+        const modalRelatedGrid = document.getElementById('modal-article-related-grid');
+
+        if (modalTitle) modalTitle.textContent = article.title;
+        if (modalCategory) modalCategory.textContent = `${article.world} · ${article.category}`;
+        if (modalAuthor) modalAuthor.textContent = article.author;
+        if (modalDate) modalDate.textContent = article.publishDate;
+        if (modalTime) modalTime.textContent = article.readingTime;
+        if (modalBody) modalBody.innerHTML = article.content;
+
+        if (modalRelatedGrid) {
+            const related = BLOG_ARTICLES_DATA.filter(a => article.relatedIds?.includes(a.id));
+            modalRelatedGrid.innerHTML = related.map(rel => `
+                <div class="modal-related-card" data-id="${rel.id}">
+                    <div class="related-card-head">
+                        <i class="${rel.coverIcon}"></i>
+                        <span>${rel.category}</span>
+                    </div>
+                    <h4>${rel.title}</h4>
+                    <span class="btn-text-link">Read Article &rarr;</span>
+                </div>
+            `).join('');
+
+            modalRelatedGrid.querySelectorAll('.modal-related-card').forEach(card => {
+                card.addEventListener('click', (e) => {
+                    const nextId = e.currentTarget.getAttribute('data-id');
+                    openArticleModal(nextId);
+                });
+            });
+        }
+
+        modal.classList.add('open');
+        modalBackdrop?.classList.add('open');
+        document.body.style.overflow = 'hidden';
+
+        if (modalContainer) {
+            modalContainer.scrollTop = 0;
+            if (progressBar) progressBar.style.width = '0%';
+        }
+    }
+
+    // Scroll Progress Bar Event inside Modal
+    modalContainer?.addEventListener('scroll', () => {
+        const scrollTop = modalContainer.scrollTop;
+        const scrollHeight = modalContainer.scrollHeight - modalContainer.clientHeight;
+        if (scrollHeight > 0 && progressBar) {
+            const pct = Math.min(100, Math.max(0, (scrollTop / scrollHeight) * 100));
+            progressBar.style.width = `${pct}%`;
+        }
+    });
+
+    // Close Modal Function
+    function closeArticleModal() {
+        modal?.classList.remove('open');
+        modalBackdrop?.classList.remove('open');
+        document.body.style.overflow = '';
+    }
+
+    modalCloseBtn?.addEventListener('click', closeArticleModal);
+    modalBackdrop?.addEventListener('click', closeArticleModal);
+
+    window.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && modal?.classList.contains('open')) {
+            closeArticleModal();
+        }
+    });
+
+    filterAllArticles();
 }
