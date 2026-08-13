@@ -1719,6 +1719,22 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--font-heading); font-weight: 600; lin
     transition: var(--transition);
 }
 
+.service-detail-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.875rem;
+    font-weight: 700;
+    color: var(--accent-teal);
+    margin-top: 1rem;
+    transition: var(--transition);
+}
+
+.service-detail-link:hover {
+    color: var(--accent-green);
+    transform: translateX(4px);
+}
+
 .subservices-toggle-btn:hover {
     color: var(--accent-green);
 }
